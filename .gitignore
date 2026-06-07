@@ -1,0 +1,46 @@
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.log
+
+# FAISS index (large binary — rebuilt from PDF)
+backend/faiss_index/
+faiss_index/
+
+# PDF source files (large files)
+backend/data/*.pdf
+*.pdf
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
