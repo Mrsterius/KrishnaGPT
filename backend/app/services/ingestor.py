@@ -5,12 +5,13 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from app.config import get_settings
+from typing import Optional
 
 settings = get_settings()
 
 # In-memory cache — avoids reloading from disk on every request
-_vectorstore: FAISS | None = None
-
+# _vectorstore: FAISS | None = None
+_vectorstore: Optional[FAISS] = None
 
 def ingest_pdf(pdf_path: str) -> int:
     """Load a PDF, chunk it, embed with OpenAI, and persist to FAISS.
